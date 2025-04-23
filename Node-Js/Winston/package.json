@@ -1,0 +1,17 @@
+{
+  "name": "winston",
+  "version": "1.0.0",
+  "description": "winston package directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "winston"
+  ],
+  "author": "XSphere International System",
+  "license": "MIT",
+  "dependencies": {
+    "winston": "^3.17.0"
+  }
+}
