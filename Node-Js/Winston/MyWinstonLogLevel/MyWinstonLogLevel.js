@@ -1,12 +1,18 @@
 // this program test loglevel function winston
-// and use npm winston package load in ../ Directory
+// and use npm winston package load in constant
+// Use argument for set to default value for LogLevel 
 
-const NodeModule = "D:/Project/syspheres/xspheres/learn/Node-Js/Winston/node_modules";
+// Configure Node_Module winston package
+const NodeModule = "E:/Project/syspheres/xspheres/learn/Node-Js/Winston/node_modules";      // Create constante for node_module folder
+const Winston = require (NodeModule+"/winston");                    // Constante declaration for use winston package
 
-const Winston = require (NodeModule+"/winston");                    // Constante declaration for use winston packa
+// read arguments
+process.argv.forEach((val, index) => {                              // Argument reading loop
+  console.log(index + ': ' + val);                                  // Display index argument and value
+});                                                                 // end of loop
 
 // You can change level 
-const MyLogLevels = {                                                // Constante for define my log level 
+const MyLogLevels = {                                               // Constante for define my log level 
     fatal: 0,                                                       // Fatal, abnormal situation, program must be stop
     error: 1,                                                       // Error, abnormal situation, program can handle this error 
     warn: 2,                                                        // Warning, Abnormal situation but program continue
