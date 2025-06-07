@@ -19,8 +19,6 @@ process.argv.forEach((Val, Index) => {                              // Argument 
     };                                                              // End of If
 });                                                                 // end of loop
 
-console.log("TmpLogLevel : " + TmpLogLevel);                        // Display MyLogLevel
-
 // CHANGING LOG LEVEL WINSTON 
 const MyLogLevels = {                                               // Constante for define my log level 
     fatal: 0,                                                       // Fatal, abnormal situation, program must be stop
@@ -33,11 +31,12 @@ const MyLogLevels = {                                               // Constante
 
 // INITIALIZE LOG LEVEL DEFAULT VALUE
 const MyLogLevel=TmpLogLevel;                                       // Constante for default value of log
+console.log("MyLogLevel : " + MyLogLevel);                          // Display MyLogLevel
 
 // CREATE A WINSTON LOGER
 const Logger = Winston.createLogger ({                              // Create a logger
     levels: MyLogLevels,
-    level: MyLogLevel || 'info',                                                  // for level infos and smaller level
+    level: MyLogLevel || 'fatal',                                   // for level infos and smaller level
     format: Winston.format.json(),                                  // format Display log in Json
     transports: [new Winston.transports.Console()],                 // Create mthode output logging
 });
