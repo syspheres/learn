@@ -2,6 +2,6 @@
 #        use Winston package in superieure directory "Winston"
 #        use loglevel configuration
 #        use program parameters 
-#        use json file format winston configuration
-#        
+#        test json file format winston configuration
+#        test logrotate log file
 # MyWinstonLogLevel.js

@@ -1,9 +1,13 @@
-// this program test loglevel function winston
+// this program test formar log line in Winston
 // and use npm winston package load in constant
 // Use argument for set to default value for LogLevel 
-// test file format json for log
+// Configure line log on json format
+// Add Timestamp in Line
 // Add Timestamp in each log line
+// Formatting Log Line in function
 // test logrotate logfile and auto delete old file
+
+const { format } = require("express/lib/response");
 
 // CONFIGURE NODE_MODULE AND LOAD WINSTON PACKAGE
 const NodeModule = "E:/Project/syspheres/xspheres/learn/Node-Js/Winston/node_modules";      // Create constante for node_module folder
@@ -34,16 +38,23 @@ const MyLogLevels = {                                               // Constante
 
 // INITIALIZE LOG LEVEL DEFAULT VALUE
 const MyLogLevel=TmpLogLevel;                                       // Constante for default value of log
-console.log("MyLogLevel : " + TmpLogLevel);                        // Display MyLogLevel
+console.log("MyLogLevel : " + TmpLogLevel);                         // Display MyLogLevel
 
-// INITIALIZE WINSTON FORMAT
-
+//INITIALIZE LOG FORMAT 
+const { combine, timestamp, align, printf, json } = Winston.format;                // Define format option use in Winston.format
 
 // CREATE A WINSTON LOGER
 const Logger = Winston.createLogger ({                              // Create a logger
     levels: MyLogLevels,
     level: MyLogLevel || 'fatal',                                   // for level infos and smaller level
-    format: Winston.format.json(),                                  // format Display log in Json
+    format: combine (                                               // Begin Format, Use Combine variable pour Winston format
+        timestamp({                                                 // Begin Formating Timestamp
+            format: 'YYYY-MM-DD hh:mm:ss.SSS A',                    // Date Format
+        }),                                                         // End Formatting TimeStamp
+        align(),                                                    // align field in log line
+        printf((info) => `[${info.timestamp}] ${info.level}: ${info.message}`),     // Formating line in order Timestamp, level and message
+//       json(),                                                     // No Json Format
+    ),                                                              // And Format
     transports: [new Winston.transports.Console()],                 // Create mthode output logging
 });
 

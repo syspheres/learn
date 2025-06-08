@@ -1,9 +1,6 @@
-// this program test loglevel function winston
-// and use npm winston package load in constant
+// this program test create log file with Winston
+// use npm winston package load in constant
 // Use argument for set to default value for LogLevel 
-// test file format json for log
-// Add Timestamp in each log line
-// test logrotate logfile and auto delete old file
 
 // CONFIGURE NODE_MODULE AND LOAD WINSTON PACKAGE
 const NodeModule = "E:/Project/syspheres/xspheres/learn/Node-Js/Winston/node_modules";      // Create constante for node_module folder
@@ -35,9 +32,6 @@ const MyLogLevels = {                                               // Constante
 // INITIALIZE LOG LEVEL DEFAULT VALUE
 const MyLogLevel=TmpLogLevel;                                       // Constante for default value of log
 console.log("MyLogLevel : " + TmpLogLevel);                        // Display MyLogLevel
-
-// INITIALIZE WINSTON FORMAT
-
 
 // CREATE A WINSTON LOGER
 const Logger = Winston.createLogger ({                              // Create a logger

@@ -1,0 +1,17 @@
+{
+  "name": "mywinstonloglevel",
+  "version": "1.0.0",
+  "description": "Example for test winston level and winston package in other directory",
+  "main": "MyWinstonLogLevel.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "winston",
+    "loglevel",
+    "node",
+    "require"
+  ],
+  "author": "Xspheres International System",
+  "license": "MIT"
+}
