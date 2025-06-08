@@ -62,7 +62,6 @@ const Logger = Winston.createLogger ({                              // Create a 
     transports: [                                                   // Begin Transport parameters Winston logger
         new Winston.transports.File({                               // Begin Transport file create a new transport for create file
             filename: `${LogFile}`,                                 // Define filename with LogDir and log file with Date in prefix
-            datePattern: 'YYYYMMDD',                                // Date format of %DATE%
         }),                                                         // end Trqnsport file
     ],                                                              // end Transport
 });
