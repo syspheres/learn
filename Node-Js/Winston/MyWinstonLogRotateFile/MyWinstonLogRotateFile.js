@@ -5,7 +5,7 @@
 // Use argument for set to default value for LogLevel
 // Combine timestamp and json to Winston format
 // configure Transport constant for configure logrotate options
-// Create and add log line in LogFile variable
+// Create LogDir and LogFile in Transport logger 
 
 
 // CONFIGURE NODE_MODULE AND LOAD WINSTON PACKAGE
