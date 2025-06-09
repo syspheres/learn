@@ -22,3 +22,5 @@
 {"level":"info","message":"Info Message","timestamp":"2025-06-08 11:04:39.333 PM"}
 {"level":"debug","message":"Debug Message","timestamp":"2025-06-08 11:04:39.333 PM"}
 {"level":"trace","message":"Trace Message","timestamp":"2025-06-08 11:04:39.333 PM"}
+{"level":"fatal","message":"fatal Message","timestamp":"2025-06-09 11:26:29.999 AM"}
+{"level":"error","message":"error Message","timestamp":"2025-06-09 11:26:30.001 AM"}

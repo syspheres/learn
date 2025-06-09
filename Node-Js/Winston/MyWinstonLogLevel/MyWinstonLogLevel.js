@@ -1,4 +1,4 @@
-// this program test loglevel function winston
+// this program test logfile and rotate file function winston
 // and use npm winston package load in constant
 // Use argument for set to default value for LogLevel 
 // test file format json for log
