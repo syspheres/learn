@@ -4,5 +4,6 @@
 #        use program parameters 
 #        test json file format winston configuration
 #        test logrotate log file
-# MyWinstonLogRotateFile.js : Script
-# MyLog : Directory for Log
+# MyLogger.js : Script logger for import
+# MyWinstonLoggerImport.js : Script
+# MyLog : Log Directory
