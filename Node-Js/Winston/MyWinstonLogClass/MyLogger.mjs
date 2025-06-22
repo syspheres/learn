@@ -62,19 +62,16 @@ const LogRotateTransport = new Winston.transports.DailyRotateFile({     // Begin
 });                                                                     // End define constant for use Transport logger
 
 // CREATE A WINSTON LOGER
-const MyLogger = Winston.createLogger ({                            // Begin Create a logger
+const MyLogger = Winston.createLogger ({                              // Create a logger
     levels: MyLogLevels,
     level: MyLogLevel || 'fatal',                                   // for level infos and smaller level
-    defaultmeta {                                                   // Begin Declare metadata logger 
-        service: 'admin-service',                                   // Declare metadata service 
-    },                                                              // End Declare metadata logger
     format: combine(                                                // combine multiple parameters format
         timestamp({                                                 // begin timestamp format
             format: 'YYYY-MM-DD hh:mm:ss.SSS A',                    // Date Format
         }),                                                         // end timestamp format
         json()),                                                    // format Display log in Json
     transports: [LogRotateTransport],                               //  Transport parameters Winston logger user constant
-});                                                                 // End create logger
+});
 
 // EXPORT MyLogger
 //export default MyLogger;

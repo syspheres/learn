@@ -3,8 +3,8 @@
 #        use loglevel configuration
 #        use program parameters 
 #        test json file format winston configuration
+#        test create logger in import
 #        test logrotate log file
-#        test create Winston logger Class
-# MyCLogger.js : Script for CLass Logger
-# MyWinstonLogImport.js : Script
+# MyLogger.js : Script logger for import
+# MyWinstonLogClass.js : Script
 # MyLog : Log Directory
