@@ -1,11 +1,14 @@
-// MyLogger.msj
-// This script contains Winston logger for import and use 
+// MyWinstonClassLogger
+// This script contains Winston logger in default class
 // Script rename MyLogger.mjs for use import module 
 
 // CONFIGURE NODE_MODULE AND LOAD WINSTON PACKAGE
 //const NodeModule = "E:/Project/syspheres/xspheres/learn/Node-Js/Winston/node_modules";      // Create constante for node_module folder
 //const Winston = require (NodeModule+"/winston");                    // Constant for require and load winston package
 //require (NodeModule+"/winston-daily-rotate-file");                  // Require winston-logrotate noe-module
+
+export default class 
+
 import Winston from 'winston';                                      // import winston node-module package
 import 'winston-daily-rotate-file';                                 // import winston-logrotate node-module package
 const LogDir = "./MyLog";                                           // Constant for log directory
