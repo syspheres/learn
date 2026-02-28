@@ -65,7 +65,7 @@ const LogRotateTransport = new Winston.transports.DailyRotateFile({     // Begin
 const MyLogger = Winston.createLogger ({                            // Begin Create a logger
     levels: MyLogLevels,
     level: MyLogLevel || 'fatal',                                   // for level infos and smaller level
-    defaultmeta {                                                   // Begin Declare metadata logger 
+    defaultmeta: {                                                  // Begin Declare metadata logger 
         service: 'admin-service',                                   // Declare metadata service 
     },                                                              // End Declare metadata logger
     format: combine(                                                // combine multiple parameters format

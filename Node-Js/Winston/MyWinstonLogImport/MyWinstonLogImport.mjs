@@ -7,7 +7,8 @@
 import MyLogger from './MyLogger.mjs';                                // Constant Define for MyLogger Module
 
 
-// DISPLAY LOGGER FOR VALIDATE TEST
+// cd 
+
 MyLogger.fatal("fatal Message");                                     // Display on output the log message of fatal level
 MyLogger.error("error Message");                                     // Display on output the log message of error level
 MyLogger.warn("Warn Message");                                       // Display on output the log message of warning level
