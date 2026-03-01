@@ -1,7 +1,7 @@
 // C_logger.js
 const winston = require('winston');
 
-const errorPath = 'somepath';
+const errorPath = 'MyLogFile';
 const format = winston.format;
 const customFormatter = format((info) => {
     return Object.assign({
