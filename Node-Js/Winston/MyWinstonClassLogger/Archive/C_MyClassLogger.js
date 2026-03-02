@@ -1,17 +1,15 @@
-// this : C_MyClassLogger.js
-// Class Logger Winston
+// C_logger.js
+const winston = require('winston');
 
-class C_MyLogger {
-    const winston = require('winston');
-    const errorPath = 'MyLogFile';
-    const format = winston.format;
-    const customFormatter = format((info) => {
-        return Object.assign({
-            timestamp: info.timestamp
-        }, info);
-    });
+const errorPath = 'MyLogFile';
+const format = winston.format;
+const customFormatter = format((info) => {
+    return Object.assign({
+        timestamp: info.timestamp
+    }, info);
+});
 
-    let settings = {
+let settings = {
     level: 'silly',
     format: winston.format.json(),
     transports: [
@@ -36,10 +34,7 @@ class C_MyLogger {
         })
     ],
     exitOnError: false
-    };
-
-    settings.transports.push(new (winston.transports.Console)());
-
-}
+};
+settings.transports.push(new (winston.transports.Console)());
 
 module.exports = new winston.createLogger(settings);
