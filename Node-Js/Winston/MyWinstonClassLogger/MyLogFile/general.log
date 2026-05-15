@@ -4,3 +4,25 @@
 {"level":"debug","message":"Some debug","timestamp":"2026-03-01T20:19:02.793Z"}
 {"level":"error","message":"Some error","timestamp":"2026-03-01T20:19:15.522Z"}
 {"level":"debug","message":"Some debug","timestamp":"2026-03-01T20:19:15.523Z"}
+{"level":"error","message":"Some error","timestamp":"2026-03-04T21:39:20.503Z"}
+{"level":"debug","message":"Some debug","timestamp":"2026-03-04T21:39:20.504Z"}
+{"level":"error","message":"Some error","timestamp":"2026-03-05T21:39:42.228Z"}
+{"level":"debug","message":"Some debug","timestamp":"2026-03-05T21:39:42.228Z"}
+{"level":"error","message":"Some error","timestamp":"2026-03-05T22:01:46.373Z"}
+{"level":"debug","message":"Some debug","timestamp":"2026-03-05T22:01:46.374Z"}
+{"level":"error","message":"Some error","timestamp":"2026-03-05T22:03:54.571Z"}
+{"level":"debug","message":"Some debug","timestamp":"2026-03-05T22:03:54.572Z"}
+{"level":"error","message":"E>rror in EA_MyMain.js","timestamp":"2026-03-05T22:06:23.898Z"}
+{"level":"debug","message":"Debug in EA_MyMain.js","timestamp":"2026-03-05T22:06:23.898Z"}
+{"level":"error","message":"Error in RC_MyAppUser.js","timestamp":"2026-03-05T22:08:07.948Z"}
+{"level":"error","message":"Error in EA_MyMain.js","timestamp":"2026-03-05T22:08:07.951Z"}
+{"level":"debug","message":"Debug in EA_MyMain.js","timestamp":"2026-03-05T22:08:07.951Z"}
+{"level":"error","message":"Error in RC_MyAppUser.js","timestamp":"2026-04-05T17:45:33.333Z"}
+{"level":"error","message":"Error in EA_MyMain.js","timestamp":"2026-04-05T17:45:33.336Z"}
+{"level":"debug","message":"Debug in EA_MyMain.js","timestamp":"2026-04-05T17:45:33.337Z"}
+{"level":"error","message":"Error in RC_MyAppUser.js","timestamp":"2026-05-14T17:40:23.091Z"}
+{"level":"error","message":"Error in EA_MyMain.js","timestamp":"2026-05-14T17:40:23.117Z"}
+{"level":"debug","message":"Debug in EA_MyMain.js","timestamp":"2026-05-14T17:40:23.119Z"}
+{"level":"error","message":"Error in RC_MyAppUser.js","timestamp":"2026-05-15T20:38:21.997Z"}
+{"level":"error","message":"Error in EA_MyMain.js","timestamp":"2026-05-15T20:38:22.000Z"}
+{"level":"debug","message":"Debug in EA_MyMain.js","timestamp":"2026-05-15T20:38:22.001Z"}

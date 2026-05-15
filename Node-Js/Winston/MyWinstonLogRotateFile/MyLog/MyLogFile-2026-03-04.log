@@ -1,0 +1,6 @@
+{"level":"fatal","message":"fatal Message","timestamp":"2026-03-04 10:46:46.218 PM"}
+{"level":"error","message":"error Message","timestamp":"2026-03-04 10:46:46.222 PM"}
+{"level":"warn","message":"Warn Message","timestamp":"2026-03-04 10:46:46.223 PM"}
+{"level":"info","message":"Info Message","timestamp":"2026-03-04 10:46:46.223 PM"}
+{"level":"debug","message":"Debug Message","timestamp":"2026-03-04 10:46:46.224 PM"}
+{"level":"trace","message":"Trace Message","timestamp":"2026-03-04 10:46:46.224 PM"}
