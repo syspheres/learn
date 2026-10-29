@@ -1,7 +1,6 @@
 // this : A_MyMain.js
 // Main program
-// const CR_MyClassLogger = require('./RC_MyClassLogger.js');                              // declare constant for classe logger
-const CR_MyClassLogger = require('./RC_MyClassLoggerNew.js');                           // declare constant for classe logger
+const CR_MyClassLogger = require('./RC_MyClassLogger.js');                              // declare constant for classe logger
 const CR_MyUserService = require('./RC_MyAppUser.js');                                  // declare a constant for UserService class
 
 global.GC_MyLog = new CR_MyClassLogger();                                               //

@@ -1,4 +1,4 @@
-// this : RC_MyClassLogger.js
+// this : RC_MyLogger.js
 // Class Logger Winston
 // this class test create log file with Winston
 // And date LogFile and activate rotate log File
@@ -9,10 +9,10 @@
 // configure Transport constant for configure logrotate options
 // Create LogDir and LogFile in Transport logger 
 
-class C_MyClassLogger {                                                         // Begin Class Logger C_MyClassLogger
-     constructor() {                                                            // Begin Constructor function of class
-        const winston = require('winston');                                     // Constant for require Winston
-        require ('/winston-daily-rotate-file');                                 // Require winston-logrotate noe-module
+class C_MyLogger {
+    constructor() {
+        const Winston = require('winston');                                     // Constant for require Winston
+        require ('winston-daily-rotate-file');                                  // Require winston-logrotate noe-module
         const Fs = require('fs');                                               // constant for require and load fs package
         const LogDir = "./MyLog";                                               // Constant for log directory
         const LogFile = "MyLogFile";                                            // Constant for log File Name
@@ -43,33 +43,71 @@ class C_MyClassLogger {                                                         
         // INITIALIZE LOG LEVEL DEFAULT VALUE
         const MyLogLevel=TmpLogLevel;                                           // Constante for default value of log
         console.log("MyLogLevel : " + TmpLogLevel);                             // Display MyLogLevel
-        
+
         // DEFINE FORMAT PARAMETERS USED
         const { combine, timestamp, json } = Winston.format;                    // define all parameters winston format
-        
+
         // DEFINE A TRANSPORT FOR LOGROTATE
         const LogRotateTransport = new Winston.transports.DailyRotateFile({     // Begin define constant for use Transport logger
+
         //  filename: 'LogFile-%DATE%.log',                                     // Define FileName log
-        filename: `${LogFile}`+'-%DATE%.log',                                   // Define FileName log
+        filename: `${LogFile}`+'-%DATE%.log',                                   // Define FileName log0
         dirname: `${LogDir}`,                                                   // Define Directory for LogFile, Directory create if not exist
         datePattern: 'YYYY-MM-DD',                                              // Define Date Pattern of %DATE%
         maxFiles: '5d',                                                         // Max Number of Day keep LogFile, here's 5 days, after logrotating
         maxSize: '512m',                                                        // Max Size for LogFIle, here's 512 Mega Octet, after logrotating
         zippedArchive: true,                                                    // Archive LogFile are zipped
         });                                                                     // End define constant for use Transport logger
-       
+
+//--------------------------------------------------------------------------------------------------------------------  
         // CREATE A WINSTON LOGER
         const Logger = Winston.createLogger ({                                  // Begin Create a logger
-            levels: MyLogLevels,                                                // Load levels by constant loglevels below 
-            level: MyLogLevel || 'fatal',                                       // for level infos and smaller level
-            format: combine(                                                    // combine multiple parameters format
-                timestamp({                                                     // begin timestamp format
-                    format: 'YYYY-MM-DD hh:mm:ss.SSS A',                        // Date Format
-                }),                                                             // end timestamp format
-                json()),                                                        // format Display log in Json
-            transports: [LogRotateTransport],                                   //  Transport parameters Winston logger user constant
+
         });
+        
+        let settings = {
+            level: MyLogLevel,
+            format: combine(timestamp(), json()),
+     
+            transports: [
+                new (Winston.transports.File)({                                 // Begin Winston Transport Section
+                    filename: `${LogFile}`+'-%DATE%.log',                       // Define FileName log
+                    dirname: `${LogDir}`,                                       // Define Directory for LogFile, Directory create if not exist
+                    datePattern: 'YYYY-MM-DD',                                  // Define Date Pattern of %DATE%
+                    maxFiles: '5d',                                             // Max Number of Day keep LogFile, here's 5 days, after logrotating
+                    maxSize: '512m',                                            // Max Size for LogFIle, here's 512 Mega Octet, after logrotating
+                    zippedArchive: true,                                        // Archive LogFile are zipped
+                }),
+            ],                                                                  // End Winston Transport Section
 
-     }                                                                          // End Constructor Function of class
+/*            transports: [
+                new (Winston.transports.File)({
+                    filename: errorPath + '/error.log',
+                    level: 'error',
+                    handleExceptions: true,
+                    stack: true,
+                    format: format.combine(
+                        format.timestamp(),
+                        customFormatter(),
+                        format.json()
+                    )
+                }),
+                new (Winston.transports.File)({
+                    filename: errorPath + '/general.log',
+                    format: format.combine(
+                        format.timestamp(),
+                        customFormatter(),
+                        format.json()
+                    )
+                })
+            ],
+*/
+            exitOnError: false
+        };
 
-}                                                                               // End Class Logger C_MyClassLogger
+        settings.transports.push(new (Winston.transports.Console)());
+        return new Winston.createLogger(settings);
+    }
+}
+
+module.exports = C_MyLogger;
