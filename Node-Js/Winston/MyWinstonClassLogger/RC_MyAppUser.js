@@ -2,13 +2,13 @@
 // Class to manage UserService, add, get, list
 
 // CLASS OPEN DESCRIPTION
-class C_UserService {                                                       // Open Class UserService
+class C_UserService {                                                     // Open Class UserService
 
   // CONSTRUCTOR METHODE OFF CLASS FOR CREATE User ARRAY
   constructor() {                                                         // Open Constructor function for class UserService
     this.users = [];                                                      // A simple in-memory store for users
     
-    GC_MyLog.error('Error in RC_MyAppUser.js');
+    GC_MyLog.error('Error in RC_MyAppUser.js');                           // Call error message in logger global class
     
     // DISPLAY LOGGER FOR VALIDATE TEST
     /*

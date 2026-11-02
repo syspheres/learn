@@ -1,9 +1,13 @@
-// this : A_MyMain.js
+
+// this : EA_MyMain.js
 // Main program
-const CR_MyClassLogger = require('./RC_MyClassLogger.js');                              // declare constant for classe logger
+
+const CR_MyClassLogger = require('./RC_MyClassRotateLogger.js');                        // declare constant for classe logger
 const CR_MyUserService = require('./RC_MyAppUser.js');                                  // declare a constant for UserService class
 
-global.GC_MyLog = new CR_MyClassLogger();                                               //
+// CREATE INSTANCE OF ClassLogger CLASS
+global.GC_MyLog = new CR_MyClassLogger();                                               // Declare a global class instance for logger
+
 // CREATE INSTANCE OF UserService CLASS
 const CC_MyUserService = new CR_MyUserService();                                        // create an instance for UserService constant class
 

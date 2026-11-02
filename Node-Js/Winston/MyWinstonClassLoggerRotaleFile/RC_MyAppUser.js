@@ -8,17 +8,13 @@ class C_UserService {                                                       // O
   constructor() {                                                         // Open Constructor function for class UserService
     this.users = [];                                                      // A simple in-memory store for users
     
-    GC_MyLog.error('Error in RC_MyAppUser.js');
-    
-    // DISPLAY LOGGER FOR VALIDATE TEST
-    /*
-    I_MyLog.fatal("fatal Message");                                       // Display on output the log message of fatal level
-    I_MyLog.error("error Message");                                       // Display on output the log message of error level
-    I_MyLog.warn("Warn Message");                                         // Display on output the log message of warning level
-    I_MyLog.info("Info Message");                                         // Display on output the log message of info level
-    I_MyLog.debug("Debug Message");                                       // Display on output the log message of debug level
-    I_MyLog.trace("Trace Message");                                       // Display on output the log message of trace level
-    */
+    GC_MyLog.fatal('fatal in RC_MyAppUser.js');                           // Display log in fatal level
+    GC_MyLog.error('Error in RC_MyAppUser.js');                           // Display log in error level
+    GC_MyLog.warni('warni in RC_MyAppUser.js');                           // Display log in warni level
+    GC_MyLog.infos('infos in RC_MyAppUser.js');                           // Display log in infos level
+    GC_MyLog.debug('debug in RC_MyAppUser.js');                           // Display log in debug level
+    GC_MyLog.trace('trace in RC_MyAppUser.js');                           // Display log in trace level
+
     }                                                                       // Close Constructor function
 
   

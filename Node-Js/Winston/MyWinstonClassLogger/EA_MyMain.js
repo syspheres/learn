@@ -1,5 +1,7 @@
-// this : A_MyMain.js
+// this : EA_MyMain.js
 // Main program
+
+
 const CR_MyClassLogger = require('./RC_MyClassLogger.js');                              // declare constant for classe logger
 const CR_MyUserService = require('./RC_MyAppUser.js');                                  // declare a constant for UserService class
 
@@ -18,5 +20,5 @@ console.log('All users:', CC_MyUserService.listUsers());                        
 console.log('Find user by email:', CC_MyUserService.getUser('alice@example.com'));      // Call userService.getUser methode for get alice name from ename
 
 
-GC_MyLog.error('Error in EA_MyMain.js');
-GC_MyLog.debug('Debug in EA_MyMain.js');
+GC_MyLog.error('Error in EA_MyMain.js');                                                // Write error in global instance of Winston logger
+GC_MyLog.debug('Debug in EA_MyMain.js');                                                // Write debug in global instance of Winston logger
